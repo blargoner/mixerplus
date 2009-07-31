@@ -1,0 +1,188 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_MIXERCTRL DIALOGEX 0, 0, 100, 150
+STYLE DS_SETFONT | DS_CONTROL | WS_CHILD
+FONT 8, "Tahoma", 400, 0, 0x0
+BEGIN
+    GROUPBOX        "Control",IDC_TITLE,3,3,94,144
+    CTEXT           "L",IDC_STATIC,14,12,8,8
+    CTEXT           "0",IDC_LVOLUMEVALUE,8,21,20,9,SS_SUNKEN
+    SCROLLBAR       IDC_LVOLUME,7,31,20,100,SBS_VERT | WS_DISABLED | 
+                    WS_TABSTOP
+    CTEXT           "R",IDC_STATIC,34,12,8,8
+    CTEXT           "0",IDC_RVOLUMEVALUE,28,21,20,9,SS_SUNKEN
+    SCROLLBAR       IDC_RVOLUME,28,31,20,100,SBS_VERT | WS_DISABLED | 
+                    WS_TABSTOP
+    CHECKBOX        "Link Faders",IDB_UNIFORM,8,134,53,8,WS_DISABLED
+    PUSHBUTTON      "Fade In",IDB_FADEIN,52,21,40,26,WS_DISABLED,
+                    WS_EX_CLIENTEDGE
+    PUSHBUTTON      "Fade Out",IDB_FADEOUT,52,50,40,26,WS_DISABLED,
+                    WS_EX_CLIENTEDGE
+    CHECKBOX        "Power",IDB_POWER,52,105,40,26,BS_PUSHLIKE | WS_DISABLED,
+                    WS_EX_CLIENTEDGE
+END
+
+IDD_CROSSFADER DIALOGEX 0, 0, 300, 45
+STYLE DS_SETFONT | DS_CONTROL | WS_CHILD
+FONT 8, "Tahoma", 400, 0, 0x0
+BEGIN
+    GROUPBOX        "Crossfader",IDC_STATIC,3,3,294,39
+    LTEXT           "Source",IDC_STATIC,10,12,23,8
+    COMBOBOX        IDC_SOURCE,9,23,90,100,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    PUSHBUTTON      "Fade",IDB_FADE,129,11,40,26,0,WS_EX_CLIENTEDGE
+    LTEXT           "Target",IDC_STATIC,202,12,22,8
+    COMBOBOX        IDC_TARGET,201,23,90,100,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+END
+
+IDD_OPTIONS DIALOGEX 0, 0, 200, 100
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION
+CAPTION "Mixer Plus Options"
+FONT 8, "Tahoma", 400, 0, 0x0
+BEGIN
+    LTEXT           "Device",IDC_STATIC,7,9,22,8
+    COMBOBOX        IDC_DEVICE,33,7,160,60,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    GROUPBOX        "Mode",IDC_STATIC,33,24,160,45
+    CONTROL         "Playback control",IDC_MODE_PLAYBACK,"Button",
+                    BS_AUTORADIOBUTTON,57,37,68,10
+    CONTROL         "Recording control (ADC)",IDC_MODE_RECORDING,"Button",
+                    BS_AUTORADIOBUTTON,57,50,93,10
+    DEFPUSHBUTTON   "&Save",IDOK,89,79,50,14
+    PUSHBUTTON      "&Cancel",IDCANCEL,143,79,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_MIXERCTRL, DIALOG
+    BEGIN
+        LEFTMARGIN, 3
+        RIGHTMARGIN, 97
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 147
+    END
+
+    IDD_CROSSFADER, DIALOG
+    BEGIN
+        LEFTMARGIN, 3
+        RIGHTMARGIN, 297
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 42
+    END
+
+    IDD_OPTIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 193
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 93
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDM_MIXERPLUS MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Close",                      ID_FILE_EXIT
+    END
+    POPUP "&Tools"
+    BEGIN
+        MENUITEM "&Options...",                 ID_TOOLS_OPTIONS
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About...",                   ID_HELP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_MIXERPLUS           ICON                    "MixerPlus.ico"
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
