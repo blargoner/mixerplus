@@ -1,7 +1,7 @@
 CC=i686-w64-mingw32-gcc
 RC=i686-w64-mingw32-windres
 CFLAGS=-I.
-LDFLAGS=-lwinmm
+LDFLAGS=-lwinmm -mwindows
 DEPS = MixerPlus.h resource.h
 OBJ = Error.o MixerPlusCFader.o MixerPlusCtrl.o MixerPlus.o MixerPlusOptions.o MixerPlusWnd.o
 RESFILES = MixerPlus.res
